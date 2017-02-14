@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <title>Line Chart</title>
+</head>
+<body>
+    <div id="chartContainer"></div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "theme2",
+                zoomEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "CANS Results"
+                },
+                subtitles: [
+                    {
+                        text: "Test Patient"
+                    }
+                ],
+                data: [
+                {
+                    type: "line",
+                    dataPoints: [
+                        
+                        {label: "August 2015", y: 2 },
+                        
+                        { label: "November 2015", y: 3 },
+                       
+                        { label: "February 2016", y: 0 },
+                       
+                        { label: "May 2016", y: 1 },
+                       
+                        { label: "August 2016", y: 2 },
+                        
+                        { label: "November 2016", y: 3 },
+                    ],
+                }
+                ]
+            });
+            chart.render();
+        };
+    </script>
+
+</body>
